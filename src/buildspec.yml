@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "BUILD BEGINNING!"
+      - mvn clean install
+  build:
+    commands:
+      - mvn compile
+      - echo "CODE COMPILED!"
+  post_build:
+    commands:
+      - echo "BUILD DONE!"
+  artifacts:
+    files:
+      - '**/*'
